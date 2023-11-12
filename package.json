@@ -1,0 +1,28 @@
+{
+  "name": "ta-demo",
+  "version": "0.0.1",
+  "description": "Template for UI test automation project, using CucumberJS and Selenium3",
+  "scripts": {
+    "test": "cucumber-js features/**/*.feature --require support/**/*.js --require step_definitions/**/*.js -f node_modules/cucumber-pretty --format json:cucumber.json --format-options \"{\\\"colorsEnabled\\\": true}\"",
+    "test-local": "cucumber-js features/**/*.feature --require support/**/*.js --require step_definitions/**/*.js -f node_modules/cucumber-pretty --format json:cucumber.json --format-options \"{\\\"colorsEnabled\\\": true}\"",
+    "test-report": "cucumber-js features/**/*.feature --require support/**/*.js --require step_definitions/**/*.js --format json:cucumber.json --format-options \"{\\\"colorsEnabled\\\": true}\" --publish",
+    "test-report-current": "cucumber-js features/**/*.feature --require support/**/*.js --require step_definitions/**/*.js --format json:cucumber.json --format-options \"{\\\"colorsEnabled\\\": true}\" --publish --tags @current"
+  },
+  "keywords": [
+    "CucumberJS",
+    "Selenium Webdriver"
+  ],
+  "author": "Laszlo Szikszai <laszlo_szikszai@epam.com> | Gabor Marton <gabor_marton1@epam.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-each": "^0.0.1",
+    "chai-sorted": "^0.2.0",
+    "chromedriver": "^119.0.0",
+    "cucumber": "^6.0.4",
+    "cucumber-pretty": "^6.0.0",
+    "fs": "0.0.1-security",
+    "selenium-webdriver": "^3.6.0"
+  }
+}
